@@ -112,6 +112,7 @@ export default function AccountPage() {
                       <div>
                         {orders.length === 0 && <p>Login to see your orders</p>}
                         {orders.length > 0 &&
+                          // eslint-disable-next-line react/jsx-key
                           orders.map((o) => <SingleOrder {...o} />)}
                       </div>
                     )}
@@ -125,6 +126,7 @@ export default function AccountPage() {
                         <WishedProductsGrid>
                           {wishedProducts.length > 0 &&
                             wishedProducts.map((wp) => (
+                              // eslint-disable-next-line react/jsx-key
                               <ProductBox
                                 {...wp}
                                 wished={true}
